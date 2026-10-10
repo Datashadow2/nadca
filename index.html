@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Voice for Change — Youth Against Alcohol & Drug Abuse</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ===== HEADER / NAVIGATION ===== -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#home" class="logo">Voice <span>for</span> Change</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">☰</button>
+      <nav class="main-nav" id="mainNav">
+        <a href="#home">Home</a>
+        <a href="#law">The Law</a>
+        <a href="#report">Report a Violation</a>
+        <a href="#rights">Know Your Rights</a>
+        <a href="#resources">Resources</a>
+        <a href="#about">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===== HOME / HERO ===== -->
+  <section id="home" class="hero">
+    <div class="container">
+      <h1>Protecting Nairobi's Youth from Alcohol & Drug Abuse</h1>
+      <p class="tagline">
+        A youth-led initiative guided by the Nairobi City County Alcoholic Drinks
+        Control and Licensing Act (NADCA).
+      </p>
+      <div class="hero-actions">
+        <a href="#report" class="btn btn-primary">Report a Violation</a>
+        <a href="#law" class="btn btn-secondary">Learn Your Rights</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== THE LAW / EDUCATIONAL HUB ===== -->
+  <section id="law" class="section">
+    <div class="container">
+      <h2>The Law Explained</h2>
+      <p class="section-intro">
+        The Nairobi City County Alcoholic Drinks Control and Licensing Act (NADCA)
+        sets clear rules to protect young people. Here are the key provisions.
+      </p>
+
+      <div class="cards">
+        <article class="card">
+          <h3>🚧 The 300m Rule</h3>
+          <p>
+            No new license can be granted to premises within <strong>300 metres</strong>
+            of a nursery, primary, secondary, or other learning institution for
+            persons under 18. A 2022 Nairobi Assembly motion also called for the
+            closure and relocation of existing outlets within this zone.
+          </p>
+        </article>
+
+        <article class="card">
+          <h3>🔞 Age Restrictions</h3>
+          <p>
+            Section 32(1) prohibits selling, supplying, or allowing access to
+            alcoholic drinks for anyone <strong>under 18 years</strong>. Penalties
+            include a fine up to <strong>Ksh 150,000</strong>, imprisonment up to
+            <strong>12 months</strong>, or both.
+          </p>
+        </article>
+
+        <article class="card">
+          <h3>🪪 ID Requirement</h3>
+          <p>
+            Section 32(4) mandates operators to demand a valid ID for age
+            verification before selling alcohol.
+          </p>
+        </article>
+
+        <article class="card">
+          <h3>📊 Why It Matters</h3>
+          <p>
+            NACADA/KIPPRA surveys found alcohol was the most abused substance among
+            primary and secondary students — with the average user age at
+            <strong>11 years</strong> and the lowest at <strong>4 years</strong>.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== REPORT A VIOLATION ===== -->
+  <section id="report" class="section section-alt">
+    <div class="container">
+      <h2>Report a Violation</h2>
+      <p class="section-intro">
+        Your report is private and used only to alert the relevant authorities.
+        Photos are for verification purposes and <strong>will not be published</strong>.
+      </p>
+
+      <form id="reportForm" class="report-form" novalidate>
+
+        <div class="form-group">
+          <label for="outletName">Outlet Name <span class="required">*</span></label>
+          <input type="text" id="outletName" name="outletName" required
+                 placeholder="e.g. Kwa Mbao Bar" />
+          <small class="error" data-error-for="outletName"></small>
+        </div>
+
+        <div class="form-group">
+          <label for="location">Location / Estate <span class="required">*</span></label>
+          <input type="text" id="location" name="location" required
+                 placeholder="e.g. Kayole, Nairobi" />
+          <small class="error" data-error-for="location"></small>
+        </div>
+
+        <div class="form-group">
+          <label for="violationType">Type of Violation <span class="required">*</span></label>
+          <select id="violationType" name="violationType" required>
+            <option value="">-- Select --</option>
+            <option value="300m">Within 300m of a school</option>
+            <option value="minors">Selling to minors</option>
+            <option value="hours">Operating outside licensed hours</option>
+            <option value="unlicensed">Unlicensed outlet</option>
+            <option value="other">Other</option>
+          </select>
+          <small class="error" data-error-for="violationType"></small>
+        </div>
+
+        <div class="form-group">
+          <label for="description">Description <span class="required">*</span></label>
+          <textarea id="description" name="description" rows="4" required
+                    placeholder="Describe what you observed..."></textarea>
+          <small class="error" data-error-for="description"></small>
+        </div>
+
+        <div class="form-group">
+          <label for="photo">Upload Photo (optional, max 5MB)</label>
+          <input type="file" id="photo" name="photo" accept="image/*" />
+          <small class="hint">
+            Photos are kept private and used only for verification and reporting
+            to authorities. They will not be published publicly.
+          </small>
+          <small class="error" data-error-for="photo"></small>
+        </div>
+
+        <div class="form-group checkbox-group">
+          <label class="checkbox-label">
+            <input type="checkbox" id="consent" name="consent" required />
+            <span>
+              I confirm I have read and agree to the
+              <a href="#privacy" class="inline-link">Privacy Notice</a>, and that
+              the information I provide is accurate to the best of my knowledge.
+            </span>
+          </label>
+          <small class="error" data-error-for="consent"></small>
+        </div>
+
+        <div class="form-group checkbox-group">
+          <label class="checkbox-label">
+            <input type="checkbox" id="anonymous" name="anonymous" />
+            <span>Submit anonymously (no name or contact required)</span>
+          </label>
+        </div>
+
+        <div class="form-group" id="contactFields">
+          <label for="contact">Your Contact (optional)</label>
+          <input type="text" id="contact" name="contact"
+                 placeholder="Phone or email (only if you want a follow-up)" />
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-block">
+          Submit Report
+        </button>
+
+        <div id="formStatus" class="form-status" role="status" aria-live="polite"></div>
+      </form>
+    </div>
+  </section>
+
+  <!-- ===== KNOW YOUR RIGHTS ===== -->
+  <section id="rights" class="section">
+    <div class="container">
+      <h2>Know Your Rights & Take Action</h2>
+      <div class="cards">
+        <article class="card">
+          <h3>📝 Petition the Liquor Licensing Committee</h3>
+          <p>
+            Through your estate association, you can formally oppose the license
+            renewal of an outlet that violates NADCA. Petitions are submitted to
+            the County Liquor Licensing Committee.
+          </p>
+        </article>
+        <article class="card">
+          <h3>📞 Report to Authorities</h3>
+          <p>
+            NACADA Helpline: <strong>1192</strong> (toll-free)<br />
+            Nairobi City County Liquor Licensing Board<br />
+            Local police station
+          </p>
+        </article>
+        <article class="card">
+          <h3>👥 Organize Your Community</h3>
+          <p>
+            Work with your estate association, local youth groups, and school
+            leadership to raise awareness and push for enforcement.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== RESOURCES ===== -->
+  <section id="resources" class="section section-alt">
+    <div class="container">
+      <h2>Resources & Support</h2>
+      <div class="cards">
+        <article class="card">
+          <h3>NACADA</h3>
+          <p>National Authority for the Campaign Against Alcohol and Drug Abuse.</p>
+          <p><strong>Helpline:</strong> 1192</p>
+        </article>
+        <article class="card">
+          <h3>For Parents & Teachers</h3>
+          <p>
+            NACADA provides guides on talking to young people about alcohol and
+            drugs, and recognizing early warning signs.
+          </p>
+        </article>
+        <article class="card">
+          <h3>Rehabilitation & Counseling</h3>
+          <p>
+            A directory of rehabilitation centers and counseling services across
+            Nairobi County.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section id="about" class="section">
+    <div class="container">
+      <h2>About Us</h2>
+      <p>
+        Voice for Change is a youth-led initiative working to protect young
+        people in Nairobi from alcohol and drug abuse. Guided by the Nairobi City
+        County Alcoholic Drinks Control and Licensing Act (NADCA), we collect
+        reports of violations and channel them to the relevant authorities.
+      </p>
+      <p class="muted">
+        This is a prototype. Formal registration and compliance steps (including
+        ODPC registration) will be completed before public launch.
+      </p>
+    </div>
+  </section>
+
+  <!-- ===== PRIVACY NOTICE ===== -->
+  <section id="privacy" class="section section-alt">
+    <div class="container">
+      <h2>Privacy Notice</h2>
+      <p><em>Placeholder — to be finalized before launch.</em></p>
+      <ul class="privacy-list">
+        <li><strong>What we collect:</strong> Outlet name, location, violation type, description, optional photo, optional contact.</li>
+        <li><strong>Why we collect it:</strong> To verify and forward reports of NADCA violations to the relevant authorities.</li>
+        <li><strong>How long we keep it:</strong> Reports are retained until the matter is resolved and any legal retention period lapses.</li>
+        <li><strong>Who sees it:</strong> Only authorized team members and the relevant authorities. Photos are never published publicly.</li>
+        <li><strong>Your rights:</strong> You may request access, correction, or deletion of your data by contacting us.</li>
+        <li><strong>Consent:</strong> By submitting a report, you confirm you have read and agreed to this notice.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span id="year"></span> Voice for Change — Nairobi, Kenya.</p>
+      <p class="muted">Prototype for demonstration purposes.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
